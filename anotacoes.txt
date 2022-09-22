@@ -1,0 +1,95 @@
+//----Arrays é uma boa pratica de programação criar arrays com apenas
+1 tipo de dado.
+
+//----Como adicionar elementos no final do array
+
+//                0        1        2
+const alunos = ['Luiz', 'Maria', 'Joao'];
+alunos.push('Luiza');
+console.log(alunos)
+
+//----Como alterar o valor de um indice do array
+
+//                0        1        2
+const alunos = ['Luiz', 'Maria', 'Joao'];
+alunos[0] = 'Eduardo' //Altera
+console.log(alunos)
+
+//----Como adicionar elementos no começo do array
+
+const alunos = ['Luiz', 'Maria', 'Joao'];
+alunos.unshift('Luiza')
+console.log(alunos)
+
+//----Como remover um elemento do array
+
+const alunos = ['Luiz', 'Maria', 'Joao'];
+alunos.pop();
+console.log(alunos);
+
+//----Como armazenar o elemento removido do final do array
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+const removido = alunos.pop();
+console.log(removido)
+console.log(alunos)
+
+//----Como armazenar o elemento removido do começo do array
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+const removido = alunos.shift();
+console.log(removido)
+console.log(alunos)
+
+//----Como armazenar o valor de um elemento de um arrayz sem modificar
+//----o indice
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+delete alunos[1];
+console.log(alunos)
+console.log(alunos[1]) //undefined
+
+//----O javascript tem um valor padrao para coisas que não existem:
+o undefined
+
+//                0        1        2
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+console.log(alunos[50]);
+
+//----Com pegar um fatia de um array, um intervalo de elementos
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+alunos.push('Luiza');
+alunos.push('Eduardo');
+
+console.log(alunos.slice(0, 3));
+
+---- A outra forma é usando negativos:
+//remove o ultimo -2 remove os dois ultimos
+console.log(alunos.slice(0, -1));
+
+//----Porque se vc imprimir o codigo a seguir retornara um objeto?
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+console.log(typeof alunos);
+
+porque o array é um objeto so que indexado.
+Então como ter certeza de que estou trabalhando com um array ?
+
+const alunos = ['Carlos', 'Maria', 'Joao'];
+
+console.log(alunos instanceof Array); se retornar true é porque é um array.
+
+//----O que acontece com alunos quando eu executo o codigo: 
+const alunos = ['Carlos', 'Maria', 'Joao'];
+alunos = 123;
+
+Alunos é sobrescrevido com 123 e deixa de ser do tipo array e passa a
+do tipo number. vscode ate deu erro dizendo que era pra modificar a variavel
+da forma correta.
